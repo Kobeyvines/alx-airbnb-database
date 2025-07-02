@@ -1,3 +1,12 @@
+--Before Indexing
+EXPLAIN ANALYZE
+SELECT *
+FROM bookings
+JOIN users ON bookings.user_id = users.user_id
+WHERE users.email = 'sample@example.com';
+
+
+
 -- database_index.sql
 
 -- ✅ Index on user_id for faster JOINs and WHERE queries
@@ -21,3 +30,11 @@ CREATE INDEX idx_bookings_user_id ON bookings(user_id);
 -- ✅ Index on property_id in bookings table for property-booking relationship queries
 CREATE INDEX idx_bookings_property_id ON bookings(property_id);
 
+
+
+--After Indexing
+EXPLAIN ANALYZE
+SELECT *
+FROM bookings
+JOIN users ON bookings.user_id = users.user_id
+WHERE users.email = 'sample@example.com';
