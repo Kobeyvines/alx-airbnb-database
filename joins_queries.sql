@@ -9,6 +9,9 @@ JOIN
     users AS users
     ON
     bookings.user_id = users.user_id
+ORDER BY 
+    booking.start_date ASC
+
 
 /*Write a query using a LEFT JOIN to retrieve all properties and their reviews, including properties
 that have no reviews.*/
@@ -36,3 +39,5 @@ FULL OUTER JOIN
     bookings AS bookings
     ON
     users.user_id = bookings.user_id
+ORDER BY 
+    users.first_name ASC
