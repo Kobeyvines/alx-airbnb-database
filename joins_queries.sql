@@ -10,7 +10,7 @@ JOIN
     ON
     bookings.user_id = users.user_id
 ORDER BY 
-    booking.start_date ASC
+    booking.start_date ASC;
 
 
 /*Write a query using a LEFT JOIN to retrieve all properties and their reviews, including properties
@@ -25,7 +25,7 @@ LEFT JOIN
     ON
     property.property_id = reviews.property_id
 ORDER BY 
-    property.name ASC
+    property.name ASC;
 
 
 /*Write a query using a FULL OUTER JOIN to retrieve all users and all bookings, even if the user has
@@ -40,4 +40,4 @@ FULL OUTER JOIN
     ON
     users.user_id = bookings.user_id
 ORDER BY 
-    users.first_name ASC
+    users.first_name ASC;
