@@ -22,7 +22,7 @@ LEFT JOIN
     ON
     property.property_id = reviews.property_id
 ORDER BY 
-    reviews.rating ASC
+    property.name ASC
 
 
 /*Write a query using a FULL OUTER JOIN to retrieve all users and all bookings, even if the user has
