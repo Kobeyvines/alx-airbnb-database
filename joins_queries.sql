@@ -16,7 +16,7 @@ INNER JOIN
 SELECT
     *
 FROM
-    property AS property
+    properties AS property
 LEFT JOIN
     reviews AS reviews
     ON
@@ -25,7 +25,7 @@ LEFT JOIN
 /*Write a query using a FULL OUTER JOIN to retrieve all users and all bookings, even if the user has
  no booking or a booking is not linked to a user.*/
 
- SELECT
+SELECT
     *
 FROM
     users AS users
